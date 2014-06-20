@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <!-- jquery required -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- the pluggin -->
+    <script type="text/javascript" src='hide_everyone_but.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.hide_everyone_but').hideEveryoneBut();
+      });
+    </script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <a id="button1" href="#" class="hide_everyone_but" data-hidden-selector=".hide_everyone_but", data-visible-selector="#button2">
+      (BUTTON 1)
+      <br />
+      <small>Show button 2</small>
+    </a>
+    <br />
+    <a id="button2" href="#" class="hide_everyone_but" data-hidden-selector=".hide_everyone_but", data-visible-selector="#button1">
+      (BUTTON 2)
+      <br />
+      <small>Show button 1</small>
+    </a>
+  </body>
+</html>
