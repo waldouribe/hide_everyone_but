@@ -5,11 +5,11 @@ $.fn.hideEverythingBut = function() {
   });
 
   function handleClickEvent(button) {
-    hideEverythingBut($(button).data('to-hide-selector'));
-    showEverythingBut($(button).data('to-show-selector'));
+    hideEverythingWithSelector($(button).data('to-hide-selector'));
+    showEverythingWithSelector($(button).data('to-show-selector'));
   }
 
-  function hideEverythingBut(selector) {
+  function hideEverythingWithSelector(selector) {
     $elements_to_hide = $(selector);
     $elements_to_hide.each(function(index, element){
       if(!$(element).hasClass('hidden')) {
@@ -18,7 +18,7 @@ $.fn.hideEverythingBut = function() {
     });
   }
 
-  function showEverythingBut(selector) {
+  function showEverythingWithSelector(selector) {
     $elements_to_show = $(selector);
     $elements_to_show.removeClass('hidden');
   }
